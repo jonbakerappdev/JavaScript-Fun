@@ -1,0 +1,21 @@
+ function sumPrimes(num) {
+  var isPrime = false;
+  var sum = 0;
+  for (var x = 2; x <= num; x++ ){
+      
+    for (var y  = 2 ; y < x && !isPrime; y++){
+      if (x%y === 0 ){
+        isPrime = true;
+      }
+    }
+    
+    if (!isPrime){
+       sum = sum + x;
+    }
+    isPrime = false;
+  }
+  
+  return sum;
+}
+
+sumPrimes(977);
